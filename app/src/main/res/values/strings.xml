@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Navjyoti AdminPanel</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">UserName</string>
+    <string name="nav_header_subtitle">user_mail</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="menu_daily_reading">দৈনিক পাঠ</string>
+    <string name="menu_daily_prayer"> দৈনিক প্রার্থনা</string>
+    <string name="menu_jop_mala">জপমালা</string>
+    <string name="menu_novena"> নভেনা</string>
+    <string name="menu_other_prayer">অন্যান্য ভক্তি ও প্রার্থনা </string>
+    <string name="menu_stob">স্তব</string>
+    <string name="menu_ritual">Book of Rituals</string>
+    <string name="menu_missal">New Bengali Missal</string>
+    <string name="menu_audio">Audio</string>
+    <string name="menu_video">Video</string>
+    <string name="menu_event">Events</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="admin">Are you Admin?</string>
+    <string name="email">abc@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="media">Media</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="menu_logOut">Log Out</string>
+
+    <string name="CopyRights">"All the text published in this app are copyright material held by Khristapujan Kendra\n"
+        "(Bengali Liturgical Service Center, Prabhu Jishu Girja,Kolkata).\n"
+        "Approved and Confirmed by decree of the S.C for Diving Worship, Prot. C.D 12/80, 23 August 1980."
+    </string>
+
+    <string name="app">Navjyoti</string>
+    <string name="closingPrayerDescription">" সমাপন প্রার্থনা বর্ণনা"</string>
+    <string name="reference">reference</string>
+    <string name="closingPrayerTitle">সমাপন প্রার্থনা:</string>
+    <string name="colorTitle">রঙ</string>
+    <string name="referenceTitle">reference</string>
+    <string name="firstReadingTitle">প্রথম পাঠ:</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="typeOfWeek">সপ্তাহের ধরন</string>
+    <string name="openingPrayer">উদ্ধোধন প্রার্থনা:</string>
+    <string name="feast_day">পর্ব/স্মরণ দিবস</string>
+
+
+    <string name="navjyoti_niketan">Navjyoti Niketan</string>
+    <string name="visit">ঊপদেশের জন্য Visit করুনঃ</string>
+    <string name="visit2">দৈনিক পাঠের জন্য Visit করুন</string>
+    <string name="the_word_enkindles">The WORD enkindles us BD Jesuits</string>
+    <string-array name="year_type">
+        <item>"'ক' পূজনবর্ষ"</item>
+        <item>"'খ' পূজনবর্ষ"</item>
+        <item>"'গ' পূজনবর্ষ"</item>
+    </string-array>
+</resources>

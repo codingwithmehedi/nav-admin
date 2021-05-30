@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F39000</color>
+    <color name="colorPrimaryDark">#B86F04</color>
+    <color name="colorAccent">#E91E63</color>
+    <color name="colorGold">#F39000</color>
+    <color name="colorGoldDark">#B86F04</color>
+    <color name="colorSpBG">#600201</color>
+    <color name="colorBlue">#3700B3</color>
+    <color name="colorGoldLite">#FFC107</color>
+    <color name="colorRoseLite">#FF77A5</color>
+    <color name="colorGrey">#ACACAC</color>
+
+
+    <color name="colorGreen">#119A18</color>
+    <color name="colorViolet">#9C27B0</color>
+    <color name="colorRose">#E91E63</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#FF1100</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackLite">#E4E4E4</color>
+</resources>

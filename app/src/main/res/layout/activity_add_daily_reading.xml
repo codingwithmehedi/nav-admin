@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bd.jesuits.admin.ui.dailyreading.AddDailyReadingActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/add_daily_reading_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f4f3f4"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/addPickDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_bg_style"
+                        android:drawablePadding="5dp"
+                        android:padding="12dp"
+                        android:textColorHint="@color/colorWhite"
+                        android:paddingLeft="10dp"
+                        android:hint="@string/pick_date"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:text="Year Type:"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <Spinner
+                            android:id="@+id/addYearType"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/colorBlack">
+                        </Spinner>
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtWeekType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/typeOfWeek"
+                            android:padding="10dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtVestment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/colorTitle"
+                            android:paddingLeft="10dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtFestDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/feast_day"
+                            android:paddingLeft="10dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tServiceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:text="প্রবেশিকা গীতি" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rServiceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dServiceSongEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="প্রবেশিকা গীতি বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tOpeningPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="@string/openingPrayer"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rOpeningPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="@string/referenceTitle"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dOpeningPrayerEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="উদ্ধোধন প্রার্থনা বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tFirstReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="@string/firstReadingTitle"
+                        android:textColor="@color/colorViolet"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rFirstReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dFirstReadingEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="প্রথম পাঠ বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tPsalmMusicEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="সামসঙ্গিত:"
+                        android:textColor="@color/colorRose"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rPsalmMusicEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dPsalmMusicEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="সামসঙ্গিত বর্ণনা "
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tSecondReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="দ্বিতীয় পাঠ:"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rSecondReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dSecondReadingEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="দ্বিতীয় পাঠ বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tWorshipWordEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="বানীবন্দনা:"
+                        android:textColor="@color/colorRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rWorshipWordEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dWorshipWordEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="বানীবন্দনা বর্ণনা"
+                    android:minHeight="120dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tGoodNewsEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="মঙ্গলসমাচার:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rGoodNewsEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dGoodNewsEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="মঙ্গল সমাচার বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tOfferingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="অর্পণ প্রার্থনা:"
+                        android:textColor="@color/colorGold"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rOfferingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dOfferingPrayerEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="অর্পণ প্রার্থনা বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tPalaceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="প্রাসাদিকা গীতি"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rPalaceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="@string/reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dPalaceSongEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="প্রাসাদিকা গীতি বর"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tClosingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="@string/closingPrayerTitle"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rClosingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="@string/reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dClosingPrayerEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/closingPrayerDescription"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="পর্ব/স্মরণ দিবস"
+                android:layout_margin="20dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/colorGold"
+                android:textColor="@color/colorWhite"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_tLifeOfSaintEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:text="সাধুর জীবনীঃ"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dLifeOfSaintEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="সাধুর জীবনী বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tServiceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:text="প্রবেশিকা গীতি" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rServiceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dServiceSongEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="প্রবেশিকা গীতি বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tOpeningPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="@string/openingPrayer"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rOpeningPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="@string/referenceTitle"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dOpeningPrayerEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="উদ্ধোধন প্রার্থনা বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tFirstReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="@string/firstReadingTitle"
+                        android:textColor="@color/colorViolet"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rFirstReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dFirstReadingEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="প্রথম পাঠ বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tPsalmMusicEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="সামসঙ্গিত:"
+                        android:textColor="@color/colorRose"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rPsalmMusicEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dPsalmMusicEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="সামসঙ্গিত বর্ণনা "
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tSecondReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="দ্বিতীয় পাঠ:"
+                        android:textColor="@color/colorBlue"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rSecondReadingEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dSecondReadingEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="দ্বিতীয় পাঠ বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tWorshipWordEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="বানীবন্দনা:"
+                        android:textColor="@color/colorRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rWorshipWordEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dWorshipWordEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="বানীবন্দনা বর্ণনা"
+                    android:minHeight="120dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tGoodNewsEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="মঙ্গলসমাচার:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rGoodNewsEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dGoodNewsEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="মঙ্গল সমাচার বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tOfferingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="অর্পণ প্রার্থনা:"
+                        android:textColor="@color/colorGold"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rOfferingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dOfferingPrayerEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="অর্পণ প্রার্থনা বর্ণনা"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tPalaceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="প্রাসাদিকা গীতি"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rPalaceSongEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="@string/reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dPalaceSongEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="প্রাসাদিকা গীতি বর"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_tClosingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:text="@string/closingPrayerTitle"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/feast_rClosingPrayerEDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="@string/reference"
+                        android:padding="5dp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/feast_dClosingPrayerEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/closingPrayerDescription"
+                    android:minHeight="120dp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnInsertDailyReading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/button_insert_bg_style"
+        android:text="Insert"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

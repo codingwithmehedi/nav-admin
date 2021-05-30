@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dailyReading"
+            android:icon="@drawable/ic_daily_reading"
+            android:title="@string/menu_daily_reading" />
+        <item
+            android:id="@+id/nav_dailyPrayer"
+            android:icon="@drawable/ic_daily_prayer"
+            android:title="@string/menu_daily_prayer" />
+        <item
+            android:id="@+id/nav_jopMala"
+            android:icon="@drawable/ic_jopmala"
+            android:title="@string/menu_jop_mala" />
+        <item
+            android:id="@+id/nav_novena"
+            android:title="@string/menu_novena"
+            android:icon="@drawable/ic_novena"/>
+        <item
+            android:id="@+id/nav_otherPrayer"
+            android:title="@string/menu_other_prayer"
+            android:icon="@drawable/ic_other_prayer"/>
+        <item
+            android:id="@+id/nav_stob"
+            android:title="@string/menu_stob"
+            android:icon="@drawable/ic_other_prayer"/>
+
+        <item android:id="@+id/nav_ritual"
+            android:title="@string/menu_ritual"
+            android:icon="@drawable/ic_book_of_rituals"/>
+
+        <item
+            android:id="@id/nav_missals"
+            android:title="@string/menu_missal"
+            android:icon="@drawable/ic_book_of_rituals"/>
+    </group>
+
+    <item android:title="Media">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_audio"
+                    android:icon="@drawable/ic_audio"
+                    android:title="@string/menu_audio"/>
+                <item android:id="@+id/nav_video"
+                    android:icon="@drawable/ic_video"
+                    android:title="@string/menu_video"/>
+            </group>
+        </menu>
+    </item>
+   <item android:title="Events">
+       <menu>
+           <group android:checkableBehavior="single">
+               <item android:title="@string/menu_event"
+                   android:icon="@drawable/ic_event"
+                   android:id="@+id/nav_event"/>
+           </group>
+       </menu>
+   </item>
+
+   <item android:title="User">
+           <menu>
+               <group android:checkableBehavior="single">
+                   <item android:id="@+id/nav_logOut"
+                       android:title="@string/menu_logOut"
+                       android:icon="@drawable/ic_log_out"
+                       />
+               </group>
+           </menu>
+   </item>
+
+
+</menu>

@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "113265436541",
+    "firebase_url": "https://jesuit-formation-center-bc021-default-rtdb.firebaseio.com",
+    "project_id": "jesuit-formation-center-bc021",
+    "storage_bucket": "jesuit-formation-center-bc021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113265436541:android:c81dd2c68ee57d0f03ce14",
+        "android_client_info": {
+          "package_name": "bd.jesuits.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113265436541-c0qn717h2nr6lecsh24n70glt04tov4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdV-wIzvbTNbMCBrqTgUFdPdD_4c82LEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113265436541-c0qn717h2nr6lecsh24n70glt04tov4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113265436541:android:1d80f24a9b1e7db503ce14",
+        "android_client_info": {
+          "package_name": "bd.jesuits.navjyoti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113265436541-oivmpg79r50j3qcqj27ov349ndrr1bce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bd.jesuits.navjyoti",
+            "certificate_hash": "6d0e288e337f02079ae99920afdfabebf4c30432"
+          }
+        },
+        {
+          "client_id": "113265436541-c0qn717h2nr6lecsh24n70glt04tov4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdV-wIzvbTNbMCBrqTgUFdPdD_4c82LEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113265436541-c0qn717h2nr6lecsh24n70glt04tov4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

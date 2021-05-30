@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dailyReading">
+
+    <fragment
+        android:id="@+id/nav_dailyReading"
+        android:name="bd.jesuits.admin.ui.dailyreading.DailyReadingFragment"
+        android:label="@string/menu_daily_reading"
+        tools:layout="@layout/fragment_daily_reading" />
+    <fragment
+        android:id="@+id/nav_dailyPrayer"
+        android:name="bd.jesuits.admin.ui.dailyprayer.DailyPrayerFragment"
+        android:label="@string/menu_daily_prayer"
+        tools:layout="@layout/fragment_daily_prayer" />
+    <fragment
+        android:id="@+id/nav_jopMala"
+        android:name="bd.jesuits.admin.ui.jopmala.JopmalaFragment"
+        android:label="@string/menu_jop_mala"
+        tools:layout="@layout/fragment_jopmala" />
+    <fragment
+        android:id="@+id/nav_novena"
+        android:name="bd.jesuits.admin.ui.novena.NovenaFragment"
+        android:label="@string/menu_novena"
+        tools:layout="@layout/fragment_novena" />
+    <fragment
+        android:id="@+id/nav_otherPrayer"
+        android:name="bd.jesuits.admin.ui.otherprayer.OtherPrayerFragment"
+        android:label="@string/menu_other_prayer"
+        tools:layout="@layout/fragment_other_prayer" />
+    <fragment
+        android:id="@+id/nav_stob"
+        android:name="bd.jesuits.admin.ui.stob.StobFragment"
+        android:label="@string/menu_stob"
+        tools:layout="@layout/fragment_stob" />
+    <fragment
+        android:id="@+id/nav_ritual"
+        android:name="bd.jesuits.admin.ui.rituals.RitualsFragment"
+        android:label="@string/menu_ritual"
+        tools:layout="@layout/fragment_rituals" />
+    <fragment
+        android:id="@+id/nav_missals"
+        android:name="bd.jesuits.admin.ui.missal.MissalFragment"
+        android:label="@string/menu_missal"
+        tools:layout="@layout/fragment_missal" />
+    <fragment
+        android:id="@+id/nav_audio"
+        android:name="bd.jesuits.admin.ui.audio.AudioFragment"
+        android:label="@string/menu_audio"
+        tools:layout="@layout/fragment_audio" />
+    <fragment
+        android:id="@+id/nav_video"
+        android:name="bd.jesuits.admin.ui.video.VideoFragment"
+        android:label="@string/menu_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/nav_event"
+        android:name="bd.jesuits.admin.ui.events.EventFragment"
+        android:label="@string/menu_event"
+        tools:layout="@layout/fragment_event" />
+</navigation>
